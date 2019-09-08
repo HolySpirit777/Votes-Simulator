@@ -1,0 +1,12 @@
+<h1> <b>Elija el presidente</b> </h1>
+<br>
+<div fxLayout="row" gdGap="5px" gdColumns="150px 150px 150px 150px 150px" fxLayoutGap="10px" >
+        <div  *ngFor="let presidente of presidentes" class="w3-card w3-hover-shadow">
+                    <header class="w3-container w3-green">
+                            {{presidente.numero}}
+                    </header>
+                    <img [src]="presidente.img" style="width:100%; max-width: 200px">
+                    <p class="w3-center">Candidato {{presidente.numero}} A <br> Presidente(A)</p>
+                </div>
+</div>
+
