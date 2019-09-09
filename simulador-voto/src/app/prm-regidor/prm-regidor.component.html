@@ -1,1 +1,18 @@
-<p>prm-regidor works!</p>
+<h1 class="w3-animate-top"> <b>Elija el regidor</b> </h1>
+<br>
+<div fxLayout="row" gdGap="5px" gdColumns="150px 150px 150px 150px 150px" fxLayoutGap="10px" >
+        <div  *ngFor="let regidor of regidores" class="w3-card w3-hover-shadow">
+                    <header class="w3-container w3-green">
+                            {{regidor.numero}}
+                    </header>
+                    <img [src]="regidor.img" style="width:100%; max-width: 200px">
+                    <p class="w3-center">Candidato {{regidor.numero}} A <br> Regidor(A)</p>
+                </div>
+                <div class="w3-card w3-hover-shadow">
+                        <header class="w3-container w3-green">
+                                16
+                        </header>
+                        <img src="../assets/Imagenes/NINGUNO.png" style="width:100%; max-width: 200px">
+                        <p class="w3-center">Nada</p>
+                    </div>
+</div>

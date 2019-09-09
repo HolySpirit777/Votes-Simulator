@@ -71,7 +71,6 @@ export class PldPresidenteComponent implements OnInit {
   ]
 
   constructor() {
-    console.log(this.presidentes);
    }
 
   ngOnInit() {
