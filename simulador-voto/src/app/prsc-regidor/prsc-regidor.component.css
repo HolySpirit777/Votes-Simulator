@@ -1,0 +1,33 @@
+.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.col-md-12, .col-md-2 {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+div {
+    display: block;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+div.one {
+    height: 10em;
+    display: flex;
+    align-items: center;
+    justify-content: center }
+
+.two {
+    margin: 0 }

@@ -1,18 +1,29 @@
-<h2 class="w3-animate-top"> <b>Elija el regidor</b> </h2>
+<h2 class="w3-animate-top w3-center" style="font-size:4vw;"> <b>Elija el presidente</b> </h2>
 <br>
-<div fxLayout="row" gdGap="5px" gdColumns="150px 150px 150px 150px 150px" fxLayoutGap="10px" >
-        <div  *ngFor="let regidor of regidores" class="w3-card w3-hover-shadow">
-                    <header class="w3-container w3-green">
-                            {{regidor.numero}}
-                    </header>
-                    <img [src]="regidor.img" style="width:100%; max-width: 200px">
-                    <p class="w3-center">Candidato {{regidor.numero}} A <br> Regidor(A)</p>
-                </div>
-                <div class="w3-card w3-hover-shadow">
-                        <header class="w3-container w3-green">
-                                16
-                        </header>
-                        <img src="../assets/Imagenes/NINGUNO.png" style="width:100%; max-width: 200px">
-                        <p class="w3-center">Nada</p>
-                    </div>
+<div class="col-md-12">
+                <div class="row one" style="margin: auto; width: 75%; padding: 15px;">
+                                <div  class="col-md-12 two" *ngFor="let regidor of regidores" class="w3-hover-shadow" style="width:20%; padding: 15px">
+                                        <div class="row">
+                                                <div class="col-md-2 w3-hover-opacity">
+                                                        <header class="w3-container w3-green">
+                                                                        {{regidor.numero}}
+                                                                </header>
+                                                                <img [src]="regidor.img" style="width:63%; display: block; margin-left: auto; margin-right: auto;">
+                                                                <p class="w3-center" style="margin: auto; font-size:1.5vw;">Candidato {{regidor.numero}} A <br> Regidor(A)</p>
+                                        </div>
+                                        </div>
+
+                                        </div>
+                                                <div class="col-md-12" style="width:20%; padding: 15px">
+                                                        <div class="row">
+                                                                        <div class="col-md-2 w3-hover-opacity">
+                                                                                        <header class="w3-container w3-green">
+                                                                                                16
+                                                                                        </header>
+                                                                                        <img src="../assets/Imagenes/NINGUNO.png" style="width:63%; display: block; margin-left: auto; margin-right: auto;">
+                                                                                        <p class="w3-center" style="margin: auto; font-size:1.5vw;">Nada</p>
+                                                                                    </div>
+                                                        </div>
+                                                </div>
+                                        </div>
 </div>

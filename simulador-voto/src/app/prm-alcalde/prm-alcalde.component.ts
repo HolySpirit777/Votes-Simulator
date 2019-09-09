@@ -68,7 +68,7 @@ export class PrmAlcaldeComponent implements OnInit {
       numero: 15,
       img: '../assets/Imagenes/Candidato M.png'
     }
-  ]
+  ];
 
   constructor() { }
 

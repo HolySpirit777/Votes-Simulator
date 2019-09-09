@@ -22,3 +22,12 @@ div {
 *, *::before, *::after {
     box-sizing: border-box;
 }
+
+div.one {
+    height: 10em;
+    display: flex;
+    align-items: center;
+    justify-content: center }
+
+.two {
+    margin: 0 }

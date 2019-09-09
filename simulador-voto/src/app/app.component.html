@@ -6,18 +6,20 @@
     <br>
     <button routerLink="inicio" *ngIf="!mostrar" class="w3-button w3-khaki w3-large w3-block" (click)="clickMostrar()">Volver a Partidos</button>
     <div *ngIf="mostrar">
-    <div style="margin: auto;width: 60%;padding: 10px;">
+    <div class="one" style="margin: auto;width: 60%;padding: 10px;">
+
     <div class="w3-animate-opacity w3-bar-item">
-        <a routerLink="/pld" class="w3-bar-item w3-button" (click)="clickMostrar()">  <img style="width:100%; max-width: 150px" src="../assets/Imagenes/PLD 3.png" alt="">   </a>
+        <a routerLink="/pld" class="w3-bar-item" (click)="clickMostrar()">  <img class="w3-hover-opacity" style="width:110%; max-width: 160px" src="../assets/Imagenes/PLD 3.png" alt="">   </a>
       </div>
 
       <div class="w3-animate-opacity w3-bar-item">
-        <a routerLink="/prm" class="w3-bar-item w3-button" (click)="clickMostrar()">  <img style="width:100%; max-width: 150px" src="../assets/Imagenes/PRM 1.jpg" alt="">   </a>
+        <a routerLink="/prm" class="w3-bar-item" (click)="clickMostrar()">  <img class="w3-hover-opacity" style="width:110%; max-width: 160px" src="../assets/Imagenes/PRM 1.jpg" alt="">   </a>
       </div>
 
       <div class="w3-animate-opacity w3-bar-item">
-        <a routerLink="/prsc" class="w3-bar-item w3-button" (click)="clickMostrar()">  <img style="width:100%; max-width: 150px" src="../assets/Imagenes/PRSC 1.png" alt="">   </a>
+        <a routerLink="/prsc" class="w3-bar-item" (click)="clickMostrar()">  <img class="w3-hover-opacity" style="width:110%; max-width: 160px" src="../assets/Imagenes/PRSC 1.png" alt="">   </a>
       </div>
+
     </div>
 </div>
 </div>
