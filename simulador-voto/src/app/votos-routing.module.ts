@@ -112,6 +112,11 @@ const routes: Routes = [
       component: PrscAlcaldeComponent
     }
     ]
+  },
+  {
+    path: '**',
+    redirectTo: 'inicio',
+    pathMatch: 'full'
   }
 ];
 
