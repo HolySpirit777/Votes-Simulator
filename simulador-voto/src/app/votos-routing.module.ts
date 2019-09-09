@@ -23,7 +23,18 @@ import { PrscPresidenteComponent } from './prsc-presidente/prsc-presidente.compo
 import { PrscRegidorComponent } from './prsc-regidor/prsc-regidor.component';
 import { PrscSenadorComponent } from './prsc-senador/prsc-senador.component';
 
+import { AppComponent } from './app.component';
+
 const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'inicio',
+    pathMatch: 'full'
+  },
+  {
+    path: 'inicio',
+    component: AppComponent
+  },
       {
         path: 'pld',
         component: PldComponent,
