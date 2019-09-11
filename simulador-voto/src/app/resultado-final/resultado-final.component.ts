@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ResultadoFinalService } from '../resultado-final.service';
 
 @Component({
   selector: 'app-resultado-final',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultadoFinalComponent implements OnInit {
 
-  constructor() { }
+  presidente = this.rf.presidente;
+  senador = this.rf.senador;
+  diputado = this.rf.diputado;
+  alcalde = this.rf.alcalde;
+  regidor = this.rf.regidor;
 
-  ngOnInit() {
-  }
+  constructor(private rf: ResultadoFinalService) { }
+
+  ngOnInit() { }
 
 }

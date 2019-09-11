@@ -23,6 +23,7 @@ import { PrscPresidenteComponent } from './prsc-presidente/prsc-presidente.compo
 import { PrscRegidorComponent } from './prsc-regidor/prsc-regidor.component';
 import { PrscSenadorComponent } from './prsc-senador/prsc-senador.component';
 
+import { ResultadoFinalComponent } from './resultado-final/resultado-final.component';
 import { AppComponent } from './app.component';
 
 const routes: Routes = [
@@ -112,6 +113,10 @@ const routes: Routes = [
       component: PrscAlcaldeComponent
     }
     ]
+  },
+  {
+    path: 'resultado-final',
+    component: ResultadoFinalComponent
   },
   {
     path: '**',

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ResultadoFinalService } from '../resultado-final.service';
 
 @Component({
   selector: 'app-pld-regidor',
@@ -70,7 +71,18 @@ export class PldRegidorComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  valorMarcado = 0;
+
+  marcar(value) {
+    this.valorMarcado = value;
+    this.rf.regidor = value;
+
+    if (this.rf.activarResultadoFinal()) {
+      this.rf.sendResult();
+    }
+  }
+
+  constructor(private rf: ResultadoFinalService) { }
 
   ngOnInit() {
   }

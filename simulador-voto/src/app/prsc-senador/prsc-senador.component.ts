@@ -70,6 +70,13 @@ export class PrscSenadorComponent implements OnInit {
     }
   ];
 
+  valorMarcado = 0;
+
+  marcar(value) {
+    this.valorMarcado = value;
+    sessionStorage.setItem('senador', value);
+  }
+
   constructor() { }
 
   ngOnInit() {

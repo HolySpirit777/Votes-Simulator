@@ -3,9 +3,9 @@
 <div class="col-md-12">
                 <div class="row one" style="margin: auto; width: 75%; padding: 15px;">
                                 <div  class="col-md-12 two" *ngFor="let alcalde of alcaldes" class="w3-hover-shadow" style="width:20%; padding: 15px">
-                                        <div class="row">
-                                                <div class="col-md-2 w3-hover-opacity">
-                                                        <header class="w3-container w3-green">
+                                        <div class="row" style="cursor: pointer;" [ngClass]="{'w3-light-blue': valorMarcado === alcalde.numero}">
+                                                <div class="col-md-2 w3-hover-opacity" (click)="marcar(alcalde.numero)">
+                                                        <header class="w3-container w3-blue">
                                                                         {{alcalde.numero}}
                                                                 </header>
                                                                 <img [src]="alcalde.img" style="width:63%; display: block; margin-left: auto; margin-right: auto;">
@@ -15,9 +15,9 @@
 
                                         </div>
                                                 <div class="col-md-12" style="width:20%; padding: 15px">
-                                                        <div class="row">
-                                                                        <div class="col-md-2 w3-hover-opacity">
-                                                                                        <header class="w3-container w3-green">
+                                                        <div class="row" style="cursor: pointer;">
+                                                                        <div class="col-md-2 w3-hover-opacity" (click)="marcar('Nada')">
+                                                                                        <header class="w3-container w3-blue">
                                                                                                 16
                                                                                         </header>
                                                                                         <img src="../assets/Imagenes/NINGUNO.png" style="width:63%; display: block; margin-left: auto; margin-right: auto;">

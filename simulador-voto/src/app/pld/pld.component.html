@@ -1,12 +1,19 @@
 <h1 class="w3-animate-zoom w3-center" style="font-size:6vw;"> <b>PLD</b> </h1>
+<div *ngIf="!show">
+<app-resultado-final></app-resultado-final>
+</div>
+<div *ngIf="show">
 <div class="one w3-animate-opacity w3-mobile" style="margin: auto; width: 50%; padding: 10px;">
 
-        <a routerLink='pld-presidente' class="w3-bar-item w3-button w3-mobile" style="font-size:2vw; padding: 5px">Presidente</a>
-        <a routerLink='pld-senador' class="w3-bar-item w3-button w3-mobile" style="font-size:2vw; padding: 5px">Senador</a>
-        <a routerLink='pld-diputado' class="w3-bar-item w3-button w3-mobile" style="font-size:2vw; padding: 5px">Diputado</a>
-        <a routerLink='pld-alcalde' class="w3-bar-item w3-button w3-mobile" style="font-size:2vw; padding: 5px">Alcalde</a>
-        <a routerLink='pld-regidor' class="w3-bar-item w3-button w3-mobile" style="font-size:2vw; padding: 5px">Regidor</a>
+        <a routerLink='pld-presidente' (click)="imprimir()" routerLinkActive="w3-deep-purple" class="w3-bar-item w3-button w3-mobile" style="font-size:2vw; padding: 5px">Presidente</a>
+        <a routerLink='pld-senador' (click)="imprimir()" routerLinkActive="w3-deep-purple" class="w3-bar-item w3-button w3-mobile" style="font-size:2vw; padding: 5px">Senador</a>
+        <a routerLink='pld-diputado' (click)="imprimir()" routerLinkActive="w3-deep-purple" class="w3-bar-item w3-button w3-mobile" style="font-size:2vw; padding: 5px">Diputado</a>
+        <a routerLink='pld-alcalde' (click)="imprimir()" routerLinkActive="w3-deep-purple" class="w3-bar-item w3-button w3-mobile" style="font-size:2vw; padding: 5px">Alcalde</a>
+        <a routerLink='pld-regidor' (click)="imprimir()" routerLinkActive="w3-deep-purple" class="w3-bar-item w3-button w3-mobile" style="font-size:2vw; padding: 5px">Regidor</a>
         
       </div>
-<br>
-<router-outlet></router-outlet>
+
+    <router-outlet></router-outlet>
+
+  </div>
+

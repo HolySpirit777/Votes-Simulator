@@ -24,6 +24,8 @@ import { PrscAlcaldeComponent } from './prsc-alcalde/prsc-alcalde.component';
 import { PrscRegidorComponent } from './prsc-regidor/prsc-regidor.component';
 import { ResultadoFinalComponent } from './resultado-final/resultado-final.component';
 
+import { ResultadoFinalService } from './resultado-final.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +54,7 @@ import { ResultadoFinalComponent } from './resultado-final/resultado-final.compo
     VotosRoutingModule,
     FlexLayoutModule
   ],
-  providers: [],
+  providers: [ResultadoFinalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

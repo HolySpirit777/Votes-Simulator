@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ResultadoFinalService } from '../resultado-final.service';
 
 @Component({
   selector: 'app-pld-alcalde',
@@ -70,9 +71,20 @@ export class PldAlcaldeComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  valorMarcado = 0;
+
+  constructor(private rf: ResultadoFinalService) { }
 
   ngOnInit() {
+  }
+
+  marcar(value) {
+    this.valorMarcado = value;
+    this.rf.alcalde = value;
+
+    if (this.rf.activarResultadoFinal()) {
+      this.rf.sendResult();
+    }
   }
 
 }

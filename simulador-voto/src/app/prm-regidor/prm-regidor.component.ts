@@ -70,6 +70,13 @@ export class PrmRegidorComponent implements OnInit {
     }
   ];
 
+  valorMarcado = 0;
+
+  marcar(value) {
+    this.valorMarcado = value;
+    sessionStorage.setItem('regidor', value);
+  }
+
   constructor() { }
 
   ngOnInit() {

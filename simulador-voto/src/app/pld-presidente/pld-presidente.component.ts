@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { ResultadoFinalService } from '../resultado-final.service';
+
 
 @Component({
   selector: 'app-pld-presidente',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pld-presidente.component.css']
 })
 export class PldPresidenteComponent implements OnInit {
+
+  @Output() pre = new EventEmitter<any>();
 
   presidentes = [
     {
@@ -70,7 +74,18 @@ export class PldPresidenteComponent implements OnInit {
     }
   ];
 
-  constructor() {
+  valorMarcado = 0;
+
+  marcar(value) {
+    this.valorMarcado = value;
+    this.rf.presidente = value;
+
+    if (this.rf.activarResultadoFinal()) {
+      this.rf.sendResult();
+    }
+  }
+
+  constructor(private rf: ResultadoFinalService) {
    }
 
   ngOnInit() {

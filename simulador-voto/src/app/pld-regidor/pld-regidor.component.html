@@ -1,11 +1,11 @@
-<h2 class="w3-animate-top w3-center" style="font-size:4vw;"> <b>Elija el presidente</b> </h2>
+<h2 class="w3-animate-top w3-center" style="font-size:4vw;"> <b>Elija el regidor</b> </h2>
 <br>
 <div class="col-md-12">
                 <div class="row one" style="margin: auto; width: 75%; padding: 15px;">
                                 <div  class="col-md-12 two" *ngFor="let regidor of regidores" class="w3-hover-shadow" style="width:20%; padding: 15px">
-                                        <div class="row">
-                                                <div class="col-md-2 w3-hover-opacity">
-                                                        <header class="w3-container w3-green">
+                                        <div class="row" style="cursor: pointer;" [ngClass]="{'w3-purple': valorMarcado === regidor.numero}">
+                                                <div class="col-md-2 w3-hover-opacity" (click)="marcar(regidor.numero)">
+                                                        <header class="w3-container w3-deep-purple">
                                                                         {{regidor.numero}}
                                                                 </header>
                                                                 <img [src]="regidor.img" style="width:63%; display: block; margin-left: auto; margin-right: auto;">
@@ -15,9 +15,9 @@
 
                                         </div>
                                                 <div class="col-md-12" style="width:20%; padding: 15px">
-                                                        <div class="row">
-                                                                        <div class="col-md-2 w3-hover-opacity">
-                                                                                        <header class="w3-container w3-green">
+                                                        <div class="row" style="cursor: pointer;">
+                                                                        <div class="col-md-2 w3-hover-opacity" (click)="marcar('Nada')">
+                                                                                        <header class="w3-container w3-deep-purple">
                                                                                                 16
                                                                                         </header>
                                                                                         <img src="../assets/Imagenes/NINGUNO.png" style="width:63%; display: block; margin-left: auto; margin-right: auto;">

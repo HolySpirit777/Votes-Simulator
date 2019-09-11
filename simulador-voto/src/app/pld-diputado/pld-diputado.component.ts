@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ResultadoFinalService } from '../resultado-final.service';
 
 @Component({
   selector: 'app-pld-diputado',
@@ -70,7 +71,18 @@ export class PldDiputadoComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  valorMarcado = 0;
+
+  marcar(value) {
+    this.valorMarcado = value;
+    this.rf.diputado = value;
+
+    if (this.rf.activarResultadoFinal()) {
+      this.rf.sendResult();
+    }
+  }
+
+  constructor(private rf: ResultadoFinalService) { }
 
   ngOnInit() {
   }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ResultadoFinalService } from '../resultado-final.service';
 
 @Component({
   selector: 'app-pld-senador',
@@ -68,9 +69,20 @@ export class PldSenadorComponent implements OnInit {
       numero: 15,
       img: '../assets/Imagenes/Candidato M.png'
     }
-  ]
+  ];
 
-  constructor() { }
+  valorMarcado = 0;
+
+  marcar(value) {
+    this.valorMarcado = value;
+    this.rf.senador = value;
+
+    if (this.rf.activarResultadoFinal()) {
+      this.rf.sendResult();
+    }
+  }
+
+  constructor(private rf: ResultadoFinalService) { }
 
   ngOnInit() {
   }
