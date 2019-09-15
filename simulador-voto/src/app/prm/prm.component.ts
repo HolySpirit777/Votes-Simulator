@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ResultadoFinalService } from '../resultado-final.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-prm',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrmComponent implements OnInit {
 
-  constructor() { }
+  show = true;
+  subscription: Subscription;
+
+  constructor(private rf: ResultadoFinalService) {
+    this.subscription = this.rf.getResult().subscribe(resultado => {
+      this.show = resultado.value;
+      console.log(this.show + ' <--- value del show');
+    });
+   }
 
   ngOnInit() {
+    console.log(this.show);
   }
 
 }

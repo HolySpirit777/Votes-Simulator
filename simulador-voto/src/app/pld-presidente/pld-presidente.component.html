@@ -1,10 +1,10 @@
 <h2 class="w3-animate-top w3-center" style="font-size:4vw;"> <b>Elija el presidente</b> </h2>
 <br>
 <div class="col-md-12">
-                <div class="row one" style="margin: auto; width: 75%; padding: 15px;">
-                                <div  class="col-md-12 two" *ngFor="let presidente of presidentes" class="w3-hover-shadow" style="width:20%; padding: 15px">
-                                        <div class="row" style="cursor: pointer;" [ngClass]="{'w3-purple': valorMarcado === presidente.numero}">
-                                                <div class="col-md-2 w3-hover-opacity" (click)="marcar(presidente.numero)">
+                <div class="row one" style="margin: auto; width: 75%; padding: 10px;">
+                                <div  class="col-md-12 two" class="w3-hover-shadow" *ngFor="let presidente of presidentes" style="width:20%; padding: 15px">
+                                        <div class="row" style="cursor: pointer;" [ngClass]="{'w3-purple': valorMarcado === presidente.numero}" (click)="marcar(presidente.numero)">
+                                                <div class="col-md-2 w3-hover-opacity">
                                                         <header class="w3-container w3-deep-purple">
                                                                         {{presidente.numero}}
                                                                 </header>
@@ -15,8 +15,8 @@
 
                                         </div>
                                                 <div class="col-md-12" style="width:20%; padding: 15px">
-                                                        <div class="row" style="cursor: pointer;">
-                                                                        <div class="col-md-2 w3-hover-opacity" (click)="marcar('Nada')">
+                                                        <div class="row" style="cursor: pointer;" (click)="marcar('Nada')">
+                                                                        <div class="col-md-2 w3-hover-opacity">
                                                                                         <header class="w3-container w3-deep-purple">
                                                                                                 16
                                                                                         </header>

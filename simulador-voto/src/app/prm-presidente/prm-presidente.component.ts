@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ResultadoFinalService } from '../resultado-final.service';
 
 @Component({
   selector: 'app-prm-presidente',
@@ -74,10 +75,14 @@ export class PrmPresidenteComponent implements OnInit {
 
   marcar(value) {
     this.valorMarcado = value;
-    sessionStorage.setItem('presidente', value);
+    this.rf.presidente = value;
+
+    if (this.rf.activarResultadoFinal()) {
+      this.rf.sendResult();
+    }
   }
 
-  constructor() { }
+  constructor(private rf: ResultadoFinalService) { }
 
   ngOnInit() {
   }

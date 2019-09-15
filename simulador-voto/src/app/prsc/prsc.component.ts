@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ResultadoFinalService } from '../resultado-final.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-prsc',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrscComponent implements OnInit {
 
-  constructor() { }
+  show = true;
+  subscription: Subscription;
+
+  constructor(private rf: ResultadoFinalService) {
+    this.subscription = this.rf.getResult().subscribe(resultado => {
+      this.show = resultado.value;
+    });
+  }
 
   ngOnInit() {
+    console.log(this.show);
   }
 
 }

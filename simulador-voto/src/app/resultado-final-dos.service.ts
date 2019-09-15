@@ -4,7 +4,7 @@ import { Subject, Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class ResultadoFinalService {
+export class ResultadoFinalDosService {
 
   constructor() { }
   presidente: number;
@@ -14,14 +14,14 @@ export class ResultadoFinalService {
   regidor: number;
 
   mostrarResultado = new Subject<boolean>();
-  showResult = new Subject<any>();
+  showResultTwo = new Subject<any>();
 
   getResult(): Observable<any> {
-    return this.showResult.asObservable();
+    return this.showResultTwo.asObservable();
   }
 
   sendResult() {
-    this.showResult.next({value: false});
+    this.showResultTwo.next({value: false});
   }
 
   activarResultadoFinal() {
@@ -30,5 +30,4 @@ export class ResultadoFinalService {
       console.log(this.presidente, this.senador, this.diputado, this.alcalde, this.regidor);
     }
   }
-
 }

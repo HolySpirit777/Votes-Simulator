@@ -75,8 +75,7 @@ export class PldAlcaldeComponent implements OnInit {
 
   constructor(private rf: ResultadoFinalService) { }
 
-  ngOnInit() {
-  }
+
 
   marcar(value) {
     this.valorMarcado = value;
@@ -85,6 +84,9 @@ export class PldAlcaldeComponent implements OnInit {
     if (this.rf.activarResultadoFinal()) {
       this.rf.sendResult();
     }
+  }
+
+  ngOnInit() {
   }
 
 }

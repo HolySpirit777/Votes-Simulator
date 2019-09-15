@@ -1,5 +1,12 @@
 <h1 class="w3-animate-zoom w3-center" style="font-size:6vw;"> <b>PRSC</b> </h1>
-<div class="one w3-animate-opacity w3-mobile" style="margin: auto; width: 50%; padding: 10px;">
+
+<div *ngIf="!show">
+    <app-resultado-final></app-resultado-final>
+</div>
+
+<div *ngIf="show">
+
+    <div class="one w3-animate-opacity w3-mobile" style="margin: auto; width: 50%; padding: 10px;">
 
         <a routerLink='prsc-presidente' routerLinkActive="w3-red"  class="w3-bar-item w3-button w3-mobile" style="font-size:2vw; padding: 5px">Presidente</a>
         <a routerLink='prsc-senador' routerLinkActive="w3-red" class="w3-bar-item w3-button w3-mobile" style="font-size:2vw; padding: 5px">Senador</a>
@@ -10,3 +17,6 @@
       </div>
 
 <router-outlet></router-outlet>
+
+
+</div>

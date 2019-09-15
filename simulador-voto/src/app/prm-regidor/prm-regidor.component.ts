@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ResultadoFinalService } from '../resultado-final.service';
 
 @Component({
   selector: 'app-prm-regidor',
@@ -74,10 +75,14 @@ export class PrmRegidorComponent implements OnInit {
 
   marcar(value) {
     this.valorMarcado = value;
-    sessionStorage.setItem('regidor', value);
+    this.rf.regidor = value;
+
+    if (this.rf.activarResultadoFinal()) {
+      this.rf.sendResult();
+    }
   }
 
-  constructor() { }
+  constructor(private rf: ResultadoFinalService) { }
 
   ngOnInit() {
   }
