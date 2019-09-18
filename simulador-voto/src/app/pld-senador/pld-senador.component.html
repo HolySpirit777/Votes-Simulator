@@ -3,8 +3,8 @@
 <div class="col-md-12">
                 <div class="row one" style="margin: auto; width: 75%; padding: 15px;">
                                 <div  class="col-md-12 two" *ngFor="let senador of senadores" class="w3-hover-shadow" style="width:20%; padding: 15px">
-                                        <div class="row" style="cursor: pointer;" [ngClass]="{'w3-purple': valorMarcado === senador.numero}">
-                                                <div class="col-md-2 w3-hover-opacity" (click)="marcar(senador.numero)">
+                                        <div class="row" style="cursor: pointer;" [ngClass]="{'w3-purple': valorMarcado === senador.numero}" (click)="marcar(senador.numero)">
+                                                <div class="col-md-2 w3-hover-opacity">
                                                         <header class="w3-container w3-deep-purple">
                                                                         {{senador.numero}}
                                                                 </header>
